@@ -1,0 +1,63 @@
+---
+import Link from "./Link.astro";
+import SideBarLink from "./SideBarLink.astro";
+import IconElement from "../shared/IconElement.astro";
+---
+
+<header>
+  <nav class="navbar-uncompressed shadow-lg shadow-black">
+    <ul class="navbar">
+      <li id="home">
+        <a href="#" aria-label="Go to the presentation section">
+          <IconElement iconType="house" height="h-8" width="w-8" />
+        </a>
+      </li>
+      <li>
+        <Link href="#aboutMe">About me</Link>
+        <Link href="#work">Work</Link>
+        <Link href="#contact">Contact</Link>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navbar-compressed">
+    <div class="nav-header-menu changeable">
+      <IconElement
+        id="show-nav-columnar-menu"
+        iconType="bars"
+        height="h-8"
+        width="w-8"
+      />
+    </div>
+    <div class="nav-columnar-menu-background changeable">
+      <div id="nav-columnar-menu" class="changeable">
+        <picture class="image-container">
+          <img
+            class="logo changeable"
+            src="./images/logo-1.svg"
+            alt="logo"
+            width="200"
+            height="200"
+          />
+        </picture>
+        <hr
+          class="w-[80%] border-0 h-0.5 bg-[var(--default-font-color)] m-auto"
+        />
+        <nav>
+          <ul
+            id="nav-columnar-menu-list"
+            class="flex flex-col items-center text-xl"
+          >
+            <SideBarLink href="#" label="Home" iconType="house" />
+            <SideBarLink href="#aboutMe" label="About me" iconType="user" />
+            <SideBarLink href="#work" label="Work" iconType="code-blocks" />
+            <SideBarLink
+              href="#contact"
+              label="Contact"
+              iconType="contact-phone"
+            />
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </nav>
+</header>

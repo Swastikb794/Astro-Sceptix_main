@@ -1,0 +1,75 @@
+---
+import "../styles/styles.css";
+import "../styles/navbar.css";
+import "../styles/footer.css";
+import "../styles/presentation-section.css";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Swastik Bhandarkar's personal portfolio."
+    />
+    <meta
+      name="keywords"
+      content="HTML,CSS,JavaScript,Github,Repository,Portfolio,Website,Github Page"
+    />
+    <meta name="author" content="swastikbhandarkar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://github.com/Swastikb794" />
+    <!-- <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Swastik Bhandarkar's personal portfolio."
+    />
+    <meta
+      property="og:description"
+      content="Swastik Bhandarkar's personal portfolio."
+    />
+    <meta
+      property="og:site_name"
+      content="Swastik Bhandarkar's personal portfolio."
+    /> -->
+    <!-- <meta property="og:image" content="file:///home/swastik/Downloads/fire.png" />
+    <meta
+      property="twitter:description"
+      content="Swastik Bhandarkar's personal portfolio."
+    /> -->
+    <!-- <meta
+      property="twitter:title"
+      content="Swastik Bhandarkar's personal portfolio."
+    /> -->
+    <link rel="icon" type="image/svg+xml" href="/images/logo-icon.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      type="text/css"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Lato:400italic%27,700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      type="text/css"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

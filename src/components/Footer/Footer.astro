@@ -1,0 +1,49 @@
+---
+import Contact from "./Contact.astro";
+import Subtitle from "../shared/Subtitle.astro";
+---
+
+<footer>
+  <div class="footer">
+    <div id="contact" class="flex flex-col justify-center reveal">
+      <Subtitle center>Contact</Subtitle>
+      <address class="text-center">
+        <Contact
+          href="mailto:swastikb794@gmail.com"
+          title="contact via this email address"
+          iconType="google"
+        />
+        <Contact
+          href="https://github.com/Swastikb794"
+          title="See my github profile"
+          iconType="github"
+        />
+        <Contact
+          href="https://www.linkedin.com/in/swastik-bhandarkar-4a4787271/"
+          title="See my linkedin profile and connect with me"
+          iconType="linkedin"
+        />
+        <Contact
+          href="https://www.instagram.com/swastikb_794/"
+          title="See my instagram profile and follow me"
+          iconType="instagram"
+        />
+      </address>
+    </div>
+    <div
+      class="text-[var(--default-font-color)] font-lato flex flex-col justify-center reveal"
+    >
+      <p class="text-center text-xl my-0 mx-auto">
+        <strong class="inline italic">© 2023 Swastik Bhandarkar</strong>
+        <br />
+        <a
+          class="work-link"
+          href="https://github.com/Swastikb794"
+          >Published</a
+        >
+        in
+        <a class="work-link" href="https://pages.github.com/">Github Page</a>
+      </p>
+    </div>
+  </div>
+</footer>
